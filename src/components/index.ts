@@ -1,3 +1,6 @@
-export * from './navbar'
+export * from './close-icon'
+export * from './filter-item'
+export * from './filter-list'
 export * from './movie-item'
 export * from './movie-list'
+export * from './navbar'

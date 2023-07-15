@@ -1,5 +1,7 @@
-import { Movie } from '@/types'
 import { render, screen } from '@testing-library/react'
+
+import { Movie } from '@/types'
+
 import { MovieItem } from './movie-item'
 
 const defaultProps: Movie = {

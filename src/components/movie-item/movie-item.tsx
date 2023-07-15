@@ -1,7 +1,8 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import { API, formatDate } from '@/utils'
+import Link from 'next/link'
+
 import { Movie } from '@/types'
+import { API, formatDate } from '@/utils'
 
 interface MovieItemProps {
   movie: Movie
@@ -14,7 +15,7 @@ export function MovieItem({ movie }: MovieItemProps) {
   return (
     <>
       <Link href="/">
-        <Image src={`${moviePoster}`} alt={`Poster for ${title}`} className="mb-3" width={300} height={300} />
+        <Image src={`${moviePoster}`} alt={`Poster for ${title}`} className="mb-3" width={500} height={500} />
       </Link>
 
       <h3 className="text-black text-sm font-bold leading-tight">{title}</h3>

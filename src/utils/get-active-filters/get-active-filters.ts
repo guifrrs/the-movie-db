@@ -1,4 +1,5 @@
 import { Filter } from '@/types'
+
 import { FILTERS_VALUES } from '../constants'
 
 type SearchParams = { [key: string]: string | string[] | undefined }

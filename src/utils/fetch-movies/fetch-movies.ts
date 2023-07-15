@@ -1,4 +1,5 @@
-import { APIResponse, Movie, Filter } from "@/types"
+import { APIResponse, Filter,Movie } from "@/types"
+
 import { API } from ".."
 
 const API_KEY = process.env.API_KEY
