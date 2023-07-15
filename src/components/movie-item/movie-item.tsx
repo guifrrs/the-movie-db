@@ -9,12 +9,12 @@ interface MovieItemProps {
 }
 
 export function MovieItem({ movie }: MovieItemProps) {
-  const { title, poster, releaseDate } = movie
+  const { id, title, poster, releaseDate } = movie
   const moviePoster = API.POSTER.concat(poster)
 
   return (
     <>
-      <Link href="/">
+      <Link href={`/movie/${id}`}>
         <Image src={`${moviePoster}`} alt={`Poster for ${title}`} className="mb-3" width={500} height={500} />
       </Link>
 
