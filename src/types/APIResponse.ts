@@ -1,4 +1,4 @@
-export interface APIResponse {
+export type APIResponse = {
   page: number
   results: {
     id: number,
