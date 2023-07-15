@@ -1,8 +1,13 @@
+import { MovieItem } from '@/components'
+import { Filter } from '@/types'
 import { fetchMovies } from '@/utils'
-import { MovieItem } from '../movie-item'
 
-export async function MovieList() {
-  const movies = await fetchMovies()
+interface MovieListProps {
+  activeFilters: Filter[]
+}
+
+export async function MovieList({ activeFilters }: MovieListProps) {
+  const movies = await fetchMovies(activeFilters)
 
   return (
     <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
