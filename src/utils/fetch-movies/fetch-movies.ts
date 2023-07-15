@@ -1,4 +1,4 @@
-import { APIResponse, Movie } from "@/types"
+import { APIResponse, Movie, Filter } from "@/types"
 import { API } from ".."
 
 const API_KEY = process.env.API_KEY
@@ -11,8 +11,9 @@ const options = {
   },
 }
 
-export async function fetchMovies(): Promise<Movie[]> {
-  const res = await fetch(API.POPULAR, options)
+export async function fetchMovies(activeFilters: Filter[]): Promise<Movie[]> {
+  const genresFilter = activeFilters.length ? `&with_genres=${activeFilters}` : ''
+  const res = await fetch(`${API.POPULAR.concat(genresFilter)}`, options)
 
   if (!res.ok) {
     throw new Error('Failed to fetch movies')
