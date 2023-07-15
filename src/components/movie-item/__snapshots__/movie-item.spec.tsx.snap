@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieItem render the movie item 1`] = `
+<div>
+  <a
+    href="/"
+  >
+    <img
+      alt="Poster for Some title"
+      class="mb-3"
+      data-nimg="1"
+      decoding="async"
+      height="300"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw300%2Fposter.jpg&w=640&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw300%2Fposter.jpg&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Fw300%2Fposter.jpg&w=640&q=75 2x"
+      style="color: transparent;"
+      width="300"
+    />
+  </a>
+  <h3
+    class="text-black text-sm font-bold leading-tight"
+  >
+    Some title
+  </h3>
+  <p
+    class="text-stone-500 text-xs font-bold leading-none"
+  >
+    May 22, 2021
+  </p>
+</div>
+`;
