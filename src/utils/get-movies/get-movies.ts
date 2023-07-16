@@ -1,6 +1,6 @@
 import { APIPopularResponse } from "@/types";
 
-export function getMoviesData({ results }: APIPopularResponse) {
+export function getMovies({ results }: APIPopularResponse) {
   return results.map((movie) => ({
     id: movie.id,
     title: movie.title,

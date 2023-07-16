@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 
-import { CloseIcon } from '@/components/close-icon'
+import { CloseIcon } from '@/components'
 
 interface FilterItemProps {
   label: string
