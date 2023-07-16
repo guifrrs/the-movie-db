@@ -1,4 +1,4 @@
-export type APIResponse = {
+export type APIPopularResponse = {
   page: number
   results: {
     id: number,
