@@ -29,13 +29,12 @@ export async function CastList({ movieId }: CastListProps) {
               key={actor.id}
               className="border-gray-100 border-2 border-r-4 p-2 shadow-sm flex flex-col content-between">
               <div className="w-44 mb-4">
-                <Image
+                <img
                   alt={actor.name}
                   className="rounded-lg shadow-black h-64"
                   src={`${actor.photo}`}
                   width={200}
                   height={200}
-                  priority
                 />
               </div>
               <div>

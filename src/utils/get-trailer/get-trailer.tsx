@@ -6,6 +6,7 @@ export function getTrailer({ results }: APIVideoResponse) {
       official: video.official,
       type: video.type,
       key: video.key,
+      name: video.name,
     }))
     .filter((video) => video.official && video.type === 'Trailer')[0]
 }

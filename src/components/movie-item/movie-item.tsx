@@ -15,7 +15,7 @@ export function MovieItem({ movie }: MovieItemProps) {
   return (
     <>
       <Link href={`/movie/${id}`}>
-        <Image src={`${moviePoster}`} alt={`Poster for ${title}`} width={500} height={500} />
+        <img src={`${moviePoster}`} alt={`Poster for ${title}`} width={500} height={500} />
       </Link>
 
       <div className="w-full">

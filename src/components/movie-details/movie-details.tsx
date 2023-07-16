@@ -42,7 +42,7 @@ export async function MovieDetails({ movieId }: MovieDetailsProps) {
 
   return (
     <div className="flex flex-col md:flex-row md:mt-16 gap-4">
-      <Image
+      <img
         alt={`Poster for ${movie.title}`}
         className="mx-auto rounded-lg shadow-black mb-10 grow md:w-1/3 max-w-sm max-h-full"
         src={`${API.POSTER}${movie.poster}`}
