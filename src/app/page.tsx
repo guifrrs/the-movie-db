@@ -1,6 +1,5 @@
-import { FilterList } from '@/components/filter-list/filter-list'
-import { MovieList } from '@/components/movie-list/movie-list'
-import { getActiveFilters } from '@/utils/get-active-filters'
+import { FilterList, MovieList } from '@/components'
+import { getActiveFilters } from '@/utils'
 
 interface HomeProps {
   searchParams: { [key: string]: string | string[] | undefined }
@@ -22,7 +21,7 @@ export default function Home({ searchParams }: HomeProps) {
       </section>
 
       <section className="p-4">
-        <MovieList activeFilters={activeFilters} />
+        <MovieList activeFilters={activeFilters} movieId={null} />
       </section>
     </main>
   )
