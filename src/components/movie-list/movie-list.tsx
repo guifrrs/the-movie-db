@@ -20,7 +20,7 @@ export async function MovieList({ activeFilters, movieId }: MovieListProps) {
   return (
     <ul className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
       {movies.map((movie) => (
-        <li key={movie.id}>
+        <li key={movie.id} className="flex flex-col justify-between gap-2">
           <MovieItem movie={movie} />
         </li>
       ))}
