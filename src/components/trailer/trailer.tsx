@@ -1,3 +1,4 @@
+import { Section } from '@/components'
 import { APIVideoResponse } from '@/types'
 import { API, fetchData, getTrailer } from '@/utils'
 
@@ -12,9 +13,21 @@ export async function Trailer({ movieId }: TrailerProps) {
 
   const trailer = getTrailer(trailerData)
 
+  if (!trailer) {
+    return null
+  }
+
   return (
-    <div className="aspect-w-16 aspect-h-9 max-w-7xl sm:h-[30rem]">
-      <iframe className="w-full h-full" title="trailer" src={`https://www.youtube.com/embed/${trailer.key}`}></iframe>
-    </div>
+    <Section>
+      <Section.Title title="Trailer" />
+      <Section.Content>
+        <div className="aspect-w-16 aspect-h-9 max-w-7xl sm:h-[30rem]">
+          <iframe
+            className="w-full h-full"
+            title="trailer"
+            src={`https://www.youtube.com/embed/${trailer.key}`}></iframe>
+        </div>
+      </Section.Content>
+    </Section>
   )
 }

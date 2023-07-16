@@ -1,5 +1,4 @@
-import { CastList, MovieList, Section, Trailer } from '@/components'
-import { MovieDetails } from '@/components/movie-details/movie-details'
+import { CastList, MovieDetails, Recommendations, Trailer } from '@/components'
 
 export default function Movie({
   params,
@@ -17,26 +16,9 @@ export default function Movie({
       </section>
 
       <section className="flex flex-col gap-4 p-4">
-        <Section>
-          <Section.Title title="Elenco original" />
-          <Section.Content>
-            <CastList movieId={movieId} />
-          </Section.Content>
-        </Section>
-
-        <Section>
-          <Section.Title title="Trailer" />
-          <Section.Content>
-            <Trailer movieId={movieId} />
-          </Section.Content>
-        </Section>
-
-        <Section>
-          <Section.Title title="Recomendações" />
-          <Section.Content>
-            <MovieList activeFilters={[]} movieId={movieId} />
-          </Section.Content>
-        </Section>
+        <CastList movieId={movieId} />
+        <Trailer movieId={movieId} />
+        <Recommendations movieId={movieId} />
       </section>
     </main>
   )
