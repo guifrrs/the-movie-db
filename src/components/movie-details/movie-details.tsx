@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import { APIMovieResponse } from '@/types/APIMovieResponse'
-import { API, fetchData, formatDate, getMovies } from '@/utils'
+import { APIMovieResponse, Movie } from '@/types'
+import { API, fetchData, formatDate } from '@/utils'
 
 interface MovieDetailsProps {
   movieId: string
@@ -9,6 +9,7 @@ interface MovieDetailsProps {
 
 const getMovie = (movieData: APIMovieResponse) => {
   return {
+    id: movieData.id,
     title: movieData.title,
     releaseDate: movieData.release_date,
     genres: movieData.genres.map((genre) => genre.name),
@@ -18,7 +19,7 @@ const getMovie = (movieData: APIMovieResponse) => {
   }
 }
 
-const getTitle = (movie) => {
+const getTitle = (movie: Movie) => {
   const title = movie.title
   const releaseYear = new Date(movie.releaseDate).getFullYear()
 

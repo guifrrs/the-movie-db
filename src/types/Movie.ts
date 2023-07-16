@@ -3,4 +3,7 @@ export type Movie = {
   title: string
   poster: string
   releaseDate: string
+  genres: string[]
+  description: string
+  runtime: number
 }

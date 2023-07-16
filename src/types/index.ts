@@ -1,5 +1,6 @@
 export * from './APIPopularResponse'
 export * from './APICastResponse'
 export * from './APIVideoResponse'
+export * from './APIMovieResponse'
 export * from './Movie'
 export * from './Filter'
