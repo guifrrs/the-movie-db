@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'TMDB',
+  description: 'TMDB - The Movie Database using Next App Router',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

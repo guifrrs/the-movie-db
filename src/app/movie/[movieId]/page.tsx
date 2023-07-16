@@ -1,12 +1,31 @@
-import { CastList, MovieDetails, Recommendations, Trailer } from '@/components'
+import type { Metadata } from 'next'
 
-export default function Movie({
-  params,
-}: {
+import { CastList, MovieDetails, Recommendations, Trailer } from '@/components'
+import { APIMovieResponse } from '@/types'
+import { API, fetchData } from '@/utils'
+
+interface RouteProps {
   params: {
     movieId: string
   }
-}) {
+}
+
+export async function generateMetadata({ params }: RouteProps): Promise<Metadata> {
+  const { movieId } = params
+
+  const movie = await fetchData<APIMovieResponse>({
+    url: `${API.MOVIE}/${movieId}}`,
+  })
+
+  const title = movie.title
+
+  return {
+    title: `TMDB - ${title}`,
+    description: `Details for ${title}`,
+  }
+}
+
+export default function Movie({ params }: RouteProps) {
   const { movieId } = params
 
   return (
