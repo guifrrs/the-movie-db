@@ -41,25 +41,26 @@ export async function MovieDetails({ movieId }: MovieDetailsProps) {
   const movie = getMovie(movieDetailsData)
 
   return (
-    <div className="flex flex-col md:flex-row md:mt-16">
+    <div className="flex flex-col md:flex-row md:mt-16 gap-4">
       <Image
         alt={`Poster for ${movie.title}`}
         className="mx-auto rounded-lg shadow-black mb-10 grow md:w-1/3 max-w-sm max-h-full"
         src={`${API.POSTER}${movie.poster}`}
-        width={200}
-        height={200}
-        loading="lazy"
+        width={300}
+        height={300}
       />
 
-      <div className="md:w-2/3 md:ml-8">
-        <h2 className="text-2xl font-bold">{getTitle(movie)}</h2>
+      <div className="md:w-2/4">
+        <div className="max-w-2xl">
+          <h2 className="text-2xl font-bold">{getTitle(movie)}</h2>
 
-        <p className="text-lg">{formatDate(movie.releaseDate)}</p>
-        <p className="text-lg">{movie.genres.join(', ')}</p>
-        <p className="text-lg">{formatTime(movie.runtime)}</p>
+          <p className="text-lg">{formatDate(movie.releaseDate)}</p>
+          <p className="text-lg">{movie.genres.join(', ')}</p>
+          <p className="text-lg">{formatTime(movie.runtime)}</p>
 
-        <h5 className="font-bold mb-4 mt-4">Sinopse</h5>
-        <p className="text-gray-300 text-sm">{movie.description}</p>
+          <h5 className="font-bold mb-4 mt-4">Sinopse</h5>
+          <p className="text-gray-300 text-sm">{movie.description}</p>
+        </div>
       </div>
     </div>
   )

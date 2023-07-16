@@ -11,7 +11,7 @@ export default function Movie({
 
   return (
     <main className="min-h-screen bg-white text-white">
-      <section className="flex flex-col md:items-center bg-violet-950 p-4">
+      <section className="bg-violet-950 p-4">
         <MovieDetails movieId={movieId} />
       </section>
 
